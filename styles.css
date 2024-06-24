@@ -1,0 +1,46 @@
+@font-face {
+  font-family: inter-bold;
+  src: url(./assets/fonts/static/Inter-Bold.ttf);
+}
+
+@font-face {
+  font-family: inter-regular;
+  src: url(./assets/fonts/static/Inter-Regular.ttf);
+}
+
+@font-face {
+  font-family: inter-semibold;
+  src: url(./assets/fonts/static/Inter-SemiBold.ttf);
+}
+
+@font-face {
+  font-family: inter-variable;
+  src: url(./assets/fonts/Inter-VariableFont_slnt\wght.ttf);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  background-color: hsl(0, 0%, 8%);
+}
+
+.container {
+  background-color: hsl(0, 0%, 12%);
+}
+
+.name,
+.message {
+  color: hsl(0, 0%, 100%);
+}
+
+.location {
+  color: hsl(75, 94%, 57%);
+}
+
+.list {
+  background-color: hsl(0, 0%, 20%);
+}
