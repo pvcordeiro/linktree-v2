@@ -1,136 +1,102 @@
-* {
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
+
+*,
+::before,
+::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+:root {
+  --green: hsl(75, 94%, 57%);
+  --white: hsl(0, 0%, 100%);
+  --grey: hsl(0, 0%, 20%);
+  --dark-grey: hsl(0, 0%, 12%);
+  --off-black: hsl(0, 0%, 8%);
+}
+
 body {
-  background-color: hsl(0, 0%, 8%);
-}
-
-.container {
-  background-color: hsl(0, 0%, 12%);
-  width: 100;
-  max-width: 500px;
-  margin: 3rem auto;
-  padding: 0.1rem 2rem;
-  border-radius: 1rem;
-}
-
-.pic {
-  border-radius: 50%;
-  width: 8.75rem;
-  height: 8.75rem;
-  overflow: hidden;
-  margin: 3rem auto;
-  object-fit: cover;
-  display: flex;
-}
-
-.name {
-  color: hsl(0, 0%, 100%);
-  font-family: inter-semibold;
-  text-align: center;
-  font-size: 30px;
-  margin: 1rem auto;
-}
-
-.location {
-  color: hsl(75, 94%, 57%);
-  font-family: inter-bold;
-  font-size: 18px;
-  text-align: center;
-  margin: 1rem auto 2rem auto;
-}
-
-.message {
-  color: hsl(0, 0%, 100%);
-  font-family: inter-regular;
-  text-align: center;
-  margin: 1rem 0 2rem 0;
-  font-size: 17px;
-}
-
-.list {
-  font-size: 20px;
-  color: hsl(0, 0%, 100%);
-  font-family: inter-bold;
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-  padding: 0.5rem 1rem 3rem;
-  max-width: 100%;
-}
-
-ul li {
-  background-color: hsl(0, 0%, 20%);
-  border-radius: 0.5rem;
+  background-color: var(--off-black);
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 1.5rem 0.5rem;
-  gap: 2rem;
+  height: 100dvh;
+  font-family: "Inter";
 }
 
-ul li:hover {
-  background-color: hsl(75, 94%, 57%);
-  color: hsl(0, 0%, 20%);
+.container {
+  background-color: var(--dark-grey);
+  display: flex;
+  height: 580px;
+  width: 330px;
+  min-width: 320px;
+  flex-direction: column;
+  align-items: center;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  justify-content: space-between;
 }
 
-.attribution {
-  color: hsl(0, 0%, 100%);
-  font-family: inter-regular;
-  padding-bottom: 2rem;
+img {
+  border-radius: 50%;
+  width: 5.5rem;
 }
 
-@font-face {
-  font-family: inter-bold;
-  src: url(./assets/fonts/static/Inter-Bold.ttf);
+.info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
 }
 
-@font-face {
-  font-family: inter-regular;
-  src: url(./assets/fonts/static/Inter-Regular.ttf);
+.name {
+  color: var(--white);
+  font-size: 1.5rem;
+  font-weight: 500;
+  padding: 1rem auto;
+  text-align: center;
 }
 
-@font-face {
-  font-family: inter-semibold;
-  src: url(./assets/fonts/static/Inter-SemiBold.ttf);
+.location {
+  color: var(--green);
+  font-size: 0.9rem;
+  font-weight: 500;
+  text-align: center;
 }
 
-@media (max-width: 480px) {
+.message {
+  color: white;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 1rem;
+}
+
+.list p {
+  font-weight: 600;
+  text-align: center;
+  color: var(--white);
+  background-color: var(--grey);
+  border-radius: 0.5rem;
+  padding: 0.9rem 0 0.9rem;
+  font-size: 0.9rem;
+}
+
+.list p:hover {
+  background-color: var(--green);
+  color: var(--grey);
+  cursor: pointer;
+}
+
+@media (min-width: 426px) {
   .container {
-    width: 100%;
-    max-width: 85%;
-    padding: 0.1rem 0.5rem;
-    margin: 8rem auto;
-  }
-
-  .pic {
-    width: 6rem;
-    height: 6rem;
-    margin: 1.5rem auto 2rem;
-  }
-
-  .name {
-    font-size: 24px;
-  }
-
-  .location {
-    font-size: 14px;
-  }
-
-  .message {
-    font-size: 14px;
-  }
-
-  .list {
-    font-size: 16px;
-    padding: 0rem 0.5rem 1rem;
-    gap: 1rem;
-  }
-
-  ul li {
-    padding: 1rem 0.5rem;
+    width: 400px;
+    height: 600px;
+    padding: 2.5rem;
   }
 }
