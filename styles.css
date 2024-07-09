@@ -18,9 +18,8 @@
 
 body {
   background-color: var(--off-black);
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  display: grid;
+  place-items: center;
   height: 100dvh;
   font-family: "Inter";
 }
@@ -28,13 +27,13 @@ body {
 .container {
   background-color: var(--dark-grey);
   display: flex;
-  height: 580px;
-  width: 330px;
-  min-width: 320px;
+  gap: 1.5rem;
+  max-width: 384px;
+  min-width: 327px;
   flex-direction: column;
   align-items: center;
   padding: 1.5rem;
-  border-radius: 1rem;
+  border-radius: 0.8rem;
   justify-content: space-between;
 }
 
@@ -95,8 +94,8 @@ img {
 
 @media (min-width: 426px) {
   .container {
-    width: 400px;
-    height: 600px;
+    width: 25rem;
+    height: 37.5rem;
     padding: 2.5rem;
   }
 }
